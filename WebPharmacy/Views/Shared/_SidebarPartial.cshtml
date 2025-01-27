@@ -32,10 +32,13 @@
                         </ul>
                     </li>
             <li class="nav-item">
-                <a href="#"><i class="ft-bookmark"></i><span class="menu-title">Pharmacy</span></a>
+                <a href="#"><i class="ft-bookmark"></i><span class="menu-title">Pharmacy Configuration</span></a>
                 <ul class="menu-content">
                     <li>
-                        <a class="menu-item" asp-action="Index" asp-controller="DrugGeneric">Drug Generic Configuration</a>
+                        <a class="menu-item" asp-action="Index" asp-controller="DrugGeneric">Drug Generic </a>
+                    </li> 
+                    <li>
+                        <a class="menu-item" asp-action="Index" asp-controller="PackagingType">Packaging Type </a>
                     </li>
                     <li>
                         <a class="menu-item" href="@Url.Action("UploadExcel","Prescription",new{area="PCARE"})">Medicine Excel Config</a>

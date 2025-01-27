@@ -66,6 +66,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Pharmacy/Pharmacy/WebPharmacy/Views/PackagingType/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnaW5nVHlwZVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Pharmacy/Pharmacy/WebPharmacy/Views/PackagingType/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnaW5nVHlwZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Pharmacy/Pharmacy/WebPharmacy/Views/PackagingType/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnaW5nVHlwZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Pharmacy/Pharmacy/WebPharmacy/Views/PackagingType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnaW5nVHlwZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Pharmacy/Pharmacy/WebPharmacy/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
