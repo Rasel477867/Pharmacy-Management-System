@@ -249,3 +249,4 @@ D:\Pharmacy\Pharmacy\WebPharmacy\bin\Debug\net8.0\runtimes\win\lib\net7.0\System
 D:\Pharmacy\Pharmacy\WebPharmacy\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\Pharmacy\Pharmacy\WebPharmacy\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 D:\Pharmacy\Pharmacy\WebPharmacy\bin\Debug\net8.0\libman.json
+D:\Pharmacy\Pharmacy\WebPharmacy\obj\Debug\net8.0\WebPharmacy.sourcelink.json
