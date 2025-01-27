@@ -1,0 +1,56 @@
+﻿@using WebPharmacy.Models
+@model DrugGenericModel
+@{
+    ViewBag.Title = "Details";
+
+}
+
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-body">
+            <div class="row" id="default">
+                <div class="col-12">
+                    <div class="card border-custom">
+                        <div class="card-header bg-custom">
+                            <h4 class="card-title"><i class="fa fa-clipboard"></i> DrugGeneric Type  Details</h4>
+                            <div class="heading-elements">
+                                <a href="@Url.Action("Index","DrugGeneric")" class="btn btn-sm btn-success white"><i class="fa fa-list white"></i> DrugGeneric Type List</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-5 label-control text-bold"> DrugGeneric Name</label>
+                                        <label class="col-md-7 label-control">
+                                            :&nbsp;&nbsp; @Html.DisplayFor(model => model.Name)
+                                        </label>
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <div class="form-group row">
+                                        <label class="col-md-5 label-control text-bold">DrugGeneric Description</label>
+                                        <label class="col-md-7 label-control">
+                                            :&nbsp;&nbsp; @Html.DisplayFor(model => model.Description)
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex justify-content-between">
+                                <a href="javascript:history.back();" class="btn btn-light btn-medium text-white"><i class="fa fa-arrow-circle-left"></i> Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

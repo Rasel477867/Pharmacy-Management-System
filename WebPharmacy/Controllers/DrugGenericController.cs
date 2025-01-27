@@ -8,9 +8,40 @@ namespace WebPharmacy.Controllers
         public IActionResult Index()
         {
             var druglist = DrugGenericList();
+   
             var model=new DrugGenericModel();
             model.DrugGenericList = druglist;
             return View(model);
+        }
+        public IActionResult Add()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Add(DrugGenericModel entity)
+        {
+            TempData["SuccessNotify"] = "Drug Generic Add Succesfully";
+           return RedirectToAction("Index");
+        }
+        public IActionResult Details(int id)
+        {
+            var druglist = DrugGenericList();
+            var model=new DrugGenericModel();
+            model=druglist.FirstOrDefault(x=>x.Id== id);
+            return View(model);
+        }
+        public IActionResult Edit(int id)
+        {
+            var druglist = DrugGenericList();
+            var model=new DrugGenericModel();
+            model = druglist.FirstOrDefault(x => x.Id == id);
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult Edit(DrugGenericModel entity)
+        {
+            TempData["SuccessNotify"] = "Drug Generic Update Succesfully";
+            return RedirectToAction("Index");
         }
         public static List<DrugGenericModel> DrugGenericList()
         {

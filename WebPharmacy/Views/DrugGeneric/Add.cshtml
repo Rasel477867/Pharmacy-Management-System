@@ -1,0 +1,68 @@
+﻿@using WebPharmacy.Models
+@model DrugGenericModel
+@{
+    ViewBag.Title = "Add";
+
+}
+
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-body">
+            <div class="row" id="default">
+                <div class="col-12">
+                    @using (Html.BeginForm("Add", "DrugGeneric", FormMethod.Post, new { @class = "form-horizontal", @id = "id" }))
+                    {
+                        <div class="card border-custom">
+                            <div class="card-header bg-custom">
+                                <h4 class="card-title"><i class="fa fa-clipboard"></i>New Container Type </h4>
+                                <div class="heading-elements">
+                                    <a href="@Url.Action("Index","DrugGeneric")" class="btn btn-sm btn-success white"><i class="fa fa-list white"></i> DrugGeneric List</a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" />
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="row">
+                                    <div class="col-md-4 mt-1">
+                                        <div class="form-group mt-1">
+                                            <label class="required">DrugGeneric Name</label>
+                                            <input required asp-for="Name" type="text" class="form-control form-control-medium">
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-4 mt-1">
+
+                                        <div class="form-group mt-1">
+                                            <label>Description</label>
+                                            <input asp-for="Description" type="text" class="form-control form-control-medium">
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between">
+                                    <a href="javascript:location.reload();" class="btn btn-light btn-medium text-white"> Cencel</a>
+                                    <button type="submit" asp-action="Add" asp-controller="DrugGeneric" class="btn btn-success btn-medium" id="submitButton"><i class="fa fa-save"></i> Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="~/Views/Shared/_ValidationScriptsPartial.cshtml" />
+
+    <script type="text/javascript">
+        // select2 load //
+        $(".select2").select2();
+    </script>
+}
+
+
