@@ -9,3 +9,4 @@ D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\CorePharmacy.dll
 D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\refint\CorePharmacy.dll
 D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\CorePharmacy.pdb
 D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\ref\CorePharmacy.dll
+D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\CorePharmacy.sourcelink.json

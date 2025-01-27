@@ -13,3 +13,4 @@ D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\RepositoryPharmacy.dll
 D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\refint\RepositoryPharmacy.dll
 D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\RepositoryPharmacy.pdb
 D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\ref\RepositoryPharmacy.dll
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\RepositoryPharmacy.sourcelink.json
