@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "RepositoryPharmacy/1.0.0": {
+        "dependencies": {
+          "CorePharmacy": "1.0.0"
+        },
+        "runtime": {
+          "RepositoryPharmacy.dll": {}
+        }
+      },
+      "CorePharmacy/1.0.0": {
+        "runtime": {
+          "CorePharmacy.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RepositoryPharmacy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CorePharmacy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

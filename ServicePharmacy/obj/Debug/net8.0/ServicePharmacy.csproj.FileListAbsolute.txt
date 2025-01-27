@@ -1,0 +1,17 @@
+D:\Pharmacy\Pharmacy\ServicePharmacy\bin\Debug\net8.0\ServicePharmacy.deps.json
+D:\Pharmacy\Pharmacy\ServicePharmacy\bin\Debug\net8.0\ServicePharmacy.dll
+D:\Pharmacy\Pharmacy\ServicePharmacy\bin\Debug\net8.0\ServicePharmacy.pdb
+D:\Pharmacy\Pharmacy\ServicePharmacy\bin\Debug\net8.0\CorePharmacy.dll
+D:\Pharmacy\Pharmacy\ServicePharmacy\bin\Debug\net8.0\RepositoryPharmacy.dll
+D:\Pharmacy\Pharmacy\ServicePharmacy\bin\Debug\net8.0\RepositoryPharmacy.pdb
+D:\Pharmacy\Pharmacy\ServicePharmacy\bin\Debug\net8.0\CorePharmacy.pdb
+D:\Pharmacy\Pharmacy\ServicePharmacy\obj\Debug\net8.0\ServicePharmacy.csproj.AssemblyReference.cache
+D:\Pharmacy\Pharmacy\ServicePharmacy\obj\Debug\net8.0\ServicePharmacy.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pharmacy\Pharmacy\ServicePharmacy\obj\Debug\net8.0\ServicePharmacy.AssemblyInfoInputs.cache
+D:\Pharmacy\Pharmacy\ServicePharmacy\obj\Debug\net8.0\ServicePharmacy.AssemblyInfo.cs
+D:\Pharmacy\Pharmacy\ServicePharmacy\obj\Debug\net8.0\ServicePharmacy.csproj.CoreCompileInputs.cache
+D:\Pharmacy\Pharmacy\ServicePharmacy\obj\Debug\net8.0\ServicePharmacy.csproj.CopyComplete
+D:\Pharmacy\Pharmacy\ServicePharmacy\obj\Debug\net8.0\ServicePharmacy.dll
+D:\Pharmacy\Pharmacy\ServicePharmacy\obj\Debug\net8.0\refint\ServicePharmacy.dll
+D:\Pharmacy\Pharmacy\ServicePharmacy\obj\Debug\net8.0\ServicePharmacy.pdb
+D:\Pharmacy\Pharmacy\ServicePharmacy\obj\Debug\net8.0\ref\ServicePharmacy.dll

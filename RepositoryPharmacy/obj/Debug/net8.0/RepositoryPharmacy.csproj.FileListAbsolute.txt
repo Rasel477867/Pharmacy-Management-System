@@ -1,0 +1,15 @@
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\bin\Debug\net8.0\RepositoryPharmacy.deps.json
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\bin\Debug\net8.0\RepositoryPharmacy.dll
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\bin\Debug\net8.0\RepositoryPharmacy.pdb
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\bin\Debug\net8.0\CorePharmacy.dll
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\bin\Debug\net8.0\CorePharmacy.pdb
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\RepositoryPharmacy.csproj.AssemblyReference.cache
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\RepositoryPharmacy.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\RepositoryPharmacy.AssemblyInfoInputs.cache
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\RepositoryPharmacy.AssemblyInfo.cs
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\RepositoryPharmacy.csproj.CoreCompileInputs.cache
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\RepositoryPharmacy.csproj.CopyComplete
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\RepositoryPharmacy.dll
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\refint\RepositoryPharmacy.dll
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\RepositoryPharmacy.pdb
+D:\Pharmacy\Pharmacy\RepositoryPharmacy\obj\Debug\net8.0\ref\RepositoryPharmacy.dll

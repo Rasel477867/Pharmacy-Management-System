@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="~/js/echarts/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="content-header">
+            <div class="breadcrumb">
+                <nav aria-label="breadcrumb">
+
+                </nav>
+            </div>
+            <div class="header-title" id="headerTitle">
+                <h2>Pharmacy Dashboard</h2>
+            </div>
+        </header>
+
+        <div id="iconContainer" class="icon-row">
+            <div class="icon-container-small">
+                <i class="fas fa-cogs"></i>
+                <span class="icon-label">Settings</span>
+            </div>
+            <div class="icon-container-small">
+                <i class="fas fa-users"></i>
+                <span class="icon-label">Users</span>
+            </div>
+            <div class="icon-container-small">
+                <i class="fas fa-boxes"></i>
+                <span class="icon-label">Inventory</span>
+            </div>
+            <div class="icon-container-small">
+                <i class="fas fa-chart-line"></i>
+                <span class="icon-label">Reports</span>
+            </div>
+        </div>
+
+        <div id="ambulatoryIcons" style="display:none;">
+            <!-- Placeholder for additional icons/content if needed -->
+        </div>
+
+        <div class="dashboard">
+            <div class="card">
+                <h2>Today's Medicine Sales</h2>
+                <div class="circle">
+                    <span class="circle-text">150</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Top Medicine Sold</h2>
+                <p>Paracetamol - 50 Sold</p>
+            </div>
+
+            <div class="card alert">
+                <h2>Low Stock Alert</h2>
+                <p>5 Medicines Low in Stock</p>
+            </div>
+
+            <div class="card">
+                <h2>Today's Earnings</h2>
+                <div class="circle">
+                    <span class="circle-text">$500</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Today's Top Medicine</h2>
+                <p>Ibuprofen - 30 Sold</p>
+            </div>
+
+            <div class="card">
+                <h2>Monthly Top Medicine</h2>
+                <p>Amoxicillin - 200 Sold</p>
+            </div>
+
+            <div class="card">
+                <h2>Monthly Earnings</h2>
+                <div class="circle">
+                    <span class="circle-text">$15000</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Yearly Earnings</h2>
+                <div class="circle">
+                    <span class="circle-text">$120000</span>
+                </div>
+            </div>
+        </div>
+
+      
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            monthlyChartInit();
+
+            $('.icon-container:has(.icon-users)').on('click', function () {
+                $('#iconContainer').hide();
+                $('#headerTitle').show();
+                $('.breadcrumb').removeClass('d-none');
+                $('#ambulatoryIcons').show();
+            });
+
+            $('#homeButton').on('click', function () {
+                $('#iconContainer').show();
+                $('#headerTitle').hide();
+                $('.breadcrumb').addClass('d-none');
+                $('#ambulatoryIcons').hide();
+            });
+        });
+
+        function monthlyChartInit() {
+            if (typeof echarts == 'undefined') {
+                console.warn('Warning - echarts.min.js is not loaded.');
+                return;
+            }
+            var dom = document.getElementById("monthlyChart");
+            var myChart = echarts.init(dom);
+            var option = {
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                },
+                legend: {
+                    top: 5,
+                    textStyle: {
+                        fontSize: 12,
+                    },
+                    itemHeight: 12,
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        axisLabel: {
+                            fontSize: 12,
+                            margin: 15,
+                            formatter: function (val) {
+                                return formatSpace(val);
+                            }
+                        },
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value'
+                    }
+                ],
+                series: [
+                    {
+                        name: 'Sales',
+                        type: 'bar',
+                        stack: 'Medicine',
+                        barWidth: 35,
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        data: [620, 732, 701, 734, 1090, 1130, 1120, 120, 132, 101, 134, 290]
+                    },
+                    {
+                        name: 'Revenue',
+                        type: 'bar',
+                        stack: 'Medicine',
+                        emphasis: {
+                            focus: 'series'
+                        },
+                        data: [160, 272, 471, 574, 390, 630, 810, 362, 182, 591, 284, 409]
+                    }
+                ]
+            };
+            if (option && typeof option === "object") {
+                myChart.setOption(option, true);
+            }
+        }
+
+        function formatSpace(val) {
+            var strs = val.split(' ').join('\n');
+            return strs;
+        };
+    </script>
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            flex: 1;
+        }
+
+        .header-title {
+            margin-right: 45%;
+            text-align: center;
+        }
+
+            .header-title h2 {
+                margin: 0;
+                font-size: 1.8em;
+                color: #4e5d6c;
+                font-weight: bold;
+            }
+
+        /* Icon Styles */
+        .icon-container-small {
+            flex: 0 1 calc(25% - 10px);
+            text-align: center;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #00a5a8;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease;
+        }
+
+            .icon-container-small:hover {
+                background-color: #e0e0e0;
+            }
+
+            .icon-container-small i {
+                font-size: 1.5em;
+                color: #fff;
+            }
+
+        .icon-label {
+            display: block;
+            margin-top: 5px;
+            font-size: 1em;
+            color: #6c757d;
+        }
+
+        /* Icon Row (Spacing between icons) */
+        .icon-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        /* Card Style */
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex-basis: calc(100% / 6 - 20px); /* 6 cards per row */
+        }
+
+            /* Card Hover Effect */
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .card h2 {
+                font-size: 1.5em;
+                color: #4e5d6c;
+                margin-bottom: 15px;
+            }
+
+            .card p {
+                font-size: 1.1em;
+                color: #6c757d;
+            }
+
+            .card .circle {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: #00a5a8;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        .circle-text {
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* Ensure Cards Align Properly in a Row */
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #monthlyChart {
+            margin-top: 30px;
+        }
+    </style>
+</body>
+</html>

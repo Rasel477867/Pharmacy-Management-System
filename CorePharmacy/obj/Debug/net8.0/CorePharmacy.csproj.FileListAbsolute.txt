@@ -1,0 +1,11 @@
+D:\Pharmacy\Pharmacy\CorePharmacy\bin\Debug\net8.0\CorePharmacy.deps.json
+D:\Pharmacy\Pharmacy\CorePharmacy\bin\Debug\net8.0\CorePharmacy.dll
+D:\Pharmacy\Pharmacy\CorePharmacy\bin\Debug\net8.0\CorePharmacy.pdb
+D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\CorePharmacy.GeneratedMSBuildEditorConfig.editorconfig
+D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\CorePharmacy.AssemblyInfoInputs.cache
+D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\CorePharmacy.AssemblyInfo.cs
+D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\CorePharmacy.csproj.CoreCompileInputs.cache
+D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\CorePharmacy.dll
+D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\refint\CorePharmacy.dll
+D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\CorePharmacy.pdb
+D:\Pharmacy\Pharmacy\CorePharmacy\obj\Debug\net8.0\ref\CorePharmacy.dll

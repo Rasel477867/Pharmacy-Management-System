@@ -1,0 +1,81 @@
+﻿
+@using CorePharmacy
+@using WebPharmacy.Models
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Identity
+
+<div class="main-menu menu-fixed menu-dark menu-accordion menu-shadow" data-scroll-to-active="true">
+    <div class="main-menu-content">
+        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+
+            <li class="nav-item">
+                <a href="@Url.Action("Index","Home", new { area = "" })"><i class="fa fa-home"></i><span class="menu-title">Dashboard</span></a>
+            </li>
+                 <li class="nav-item">
+                        <a href="#"><i class="ft-bookmark"></i><span class="menu-title">Hospital</span></a>
+                        <ul class="menu-content">
+                            <li>
+                                <a class="menu-item" asp-controller="PreRegistration" asp-action="Index" asp-area="ACARE">Pre Registration</a>
+                            </li>
+                            <li>
+                                <a class="menu-item" asp-controller="Registration" asp-action="Index" asp-area="ACARE">Registration</a>
+                            </li>
+                            <li>
+                                <a class="menu-item" asp-controller="DoctorRegistration" asp-action="Index" asp-area="ACARE">Doctor Registration</a>
+                            </li>
+                            <li>
+                                <a class="menu-item" asp-controller="DoctorAppointment" asp-action="Add" asp-area="ACARE">Doctor Appointment</a>
+                            </li>
+                            <li>
+                                <a class="menu-item" asp-controller="Invoice" asp-action="Add" asp-area="ACARE">Invoice</a>
+                            </li>
+                        </ul>
+                    </li>
+            <li class="nav-item">
+                <a href="#"><i class="ft-bookmark"></i><span class="menu-title">Pharmacy</span></a>
+                <ul class="menu-content">
+                    <li>
+                        <a class="menu-item" asp-action="Index" asp-controller="DrugGeneric">Drug Generic Configuration</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("UploadExcel","Prescription",new{area="PCARE"})">Medicine Excel Config</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("Index","Drug",new{area="PHAR"})">Medicine Config</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("Add","PurchaseMedicine",new{area="PHAR"})">Order Medicine</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("Index","PurchaseMedicine",new{area="PHAR"})">Medicine List</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("AdministrationOrder","PurchaseMedicine",new{area="PHAR"})">Addministation Order </a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("OrderProcess","PurchaseMedicine",new{area="PHAR"})">Medicine Order DownLoad</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("ReceivedOrder","PurchaseMedicine",new{area="PHAR"})">Medicine Order Recived</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("InPatientOrders","PurchaseMedicine",new{area="PHAR"})">IP Pharmacy Order</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("PendingOrder","PurchaseMedicine",new{area="PHAR"})">Process In Patient Order</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("OPOrder","PurchaseMedicine",new{area="PHAR"})">OP Pharmacy Order</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("ReturnMedicine","PurchaseMedicine",new{area="PHAR"})">Return Request Medicine</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="@Url.Action("ReturnOrder","PurchaseMedicine",new{area="PHAR"})">Return Medicine</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
