@@ -1,0 +1,111 @@
+﻿@using WebPharmacy.Models
+@model MedicineModel
+
+@{
+    ViewData["Title"] = "Index";
+    var sl = 1;
+}
+
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-body">
+            <div class="row" id="default">
+                <div class="col-12">
+                    <div class="card border-custom">
+                        <div class="card-header bg-custom be">
+                            <h4 class="card-title"><i class="fa fa-prescription-bottle"></i> Medicine List</h4>
+                            <div class="heading-elements">
+                                <a href="@Url.Action("Add","Medicine")" class="btn btn-sm btn-success white"><i class="fa fa-plus white"></i> New Medicine</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-condensed table-striped" id="containerTable">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th class="serial">Sl</th>
+                                                        <th>Medicine</th>
+                                                        <th>DosageForm</th>
+                                                        <th>UOM</th>
+                                                        <th>Quantity</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @if (Model?.MedicineList != null && Model.MedicineList.Any())
+                                                    {
+                                                        foreach (var item in Model.MedicineList)
+                                                        {
+                                                            <tr>
+                                                                <td class="serial">@sl</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.MedicineName)</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.DosageForm)</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.Unit)</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+                                                                <td class="action">
+                                                                    <div class="d-flex">
+                                                                        <a asp-action="Details" asp-controller="Medicine" asp-route-id="@item.Id" class="text-info" title="Details">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </a>
+                                                                        &nbsp;&nbsp;
+                                                                        <a asp-action="Edit" asp-controller="Medicine" asp-route-id="@item.Id" class="text-primary" title="Edit">
+                                                                            <i class="fa fa-pencil"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            sl++;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <tr>
+                                                            <td colspan="4" class="text-center">No data available</td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="~/Bundle/_PagedListStylesPartial.cshtml" />
+    <partial name="~/Bundle/_SweetAlertScriptsPartial.cshtml" />
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.js"></script>
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <link href="~/lib/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+    <script>
+        $(document).ready(function () {
+            $('#containerTable').dataTable({
+                paging: true,
+                searching: true,
+                ordering: true,
+                info: false,
+                lengthChange: false,
+                pageLength: 7
+            });
+        });
+    </script>
+}
+
+<style>
+    .dataTables_paginate .paginate_button {
+        margin: 0 5px; /* Add horizontal spacing between buttons */
+    }
+</style>
+
+
+

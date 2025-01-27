@@ -42,6 +42,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QnVuZGxlXF9Td2VldEFsZXJ0U2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Pharmacy/Pharmacy/WebPharmacy/Views/Company/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Pharmacy/Pharmacy/WebPharmacy/Views/Company/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Pharmacy/Pharmacy/WebPharmacy/Views/Company/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Pharmacy/Pharmacy/WebPharmacy/Views/DrugGeneric/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJ1Z0dlbmVyaWNcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,6 +76,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Pharmacy/Pharmacy/WebPharmacy/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Pharmacy/Pharmacy/WebPharmacy/Views/Medicine/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNpbmVcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Pharmacy/Pharmacy/WebPharmacy/Views/Medicine/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNpbmVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Pharmacy/Pharmacy/WebPharmacy/Views/Medicine/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNpbmVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Pharmacy/Pharmacy/WebPharmacy/Views/Medicine/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNpbmVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Pharmacy/Pharmacy/WebPharmacy/Views/PackagingType/Add.cshtml]
