@@ -1,0 +1,190 @@
+﻿@using WebPharmacy.Models
+@model MedicineModel
+@{
+    ViewBag.Title = "Add";
+
+}
+
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-body">
+            <div class="row" id="default">
+                <div class="col-12">
+                    @using (Html.BeginForm("Add", "Medicine", FormMethod.Post, new { @class = "form-horizontal", @id = "id" }))
+                    {
+                        <div class="card border-custom">
+                            <div class="card-header bg-custom">
+                                <h4 class="card-title"><i class="fa fa-clipboard"></i>New Medicine Type </h4>
+                                <div class="heading-elements">
+                                    <a href="@Url.Action("Index","Medicine")" class="btn btn-sm btn-success white"><i class="fa fa-list white"></i> Medicine List</a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" />
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="row">
+                                    <div class="col-md-4 mt-1">
+                                        <div class="form-group mt-1">
+                                            <label class="required">Medicine Name</label>
+                                            <input required asp-for="MedicineName" type="text" class="form-control form-control-medium">
+                                        </div>
+                                        <div class="form-group mt-1">
+                                            <label>Company</label>
+                                            <select asp-for="CompanyName" class="form-control form-control-medium select2">
+                                                <option value="">Select a Company</option>
+                                                <option value="Square Pharma">Square Pharma</option>
+                                                <option value="Beximco Pharma">Beximco Pharma</option>
+                                                <option value="Incepta Pharma">Incepta Pharma</option>
+                                                <option value="Renata Limited">Renata Limited</option>
+                                                <option value="Eskayef">Eskayef</option>
+                                                <option value="ACI Limited">ACI Limited</option>
+                                                <option value="Opsonin Pharma">Opsonin Pharma</option>
+                                                <option value="Aristopharma">Aristopharma</option>
+                                                <option value="GlaxoSmithKline (GSK)">GlaxoSmithKline (GSK)</option>
+                                                <option value="Healthcare Pharma">Healthcare Pharma</option>
+                                                <option value="Drug International">Drug International</option>
+                                                <option value="General Pharma">General Pharma</option>
+                                                <option value="Navana Pharma">Navana Pharma</option>
+                                                <option value="Popular Pharma">Popular Pharma</option>
+                                                <option value="Beacon Pharma">Beacon Pharma</option>
+                                                <option value="Nuvista Pharma">Nuvista Pharma</option>
+                                                <option value="Delta Pharma">Delta Pharma</option>
+                                                <option value="Sanofi Bangladesh">Sanofi Bangladesh</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group mt-1">
+                                            <label>Generic Name</label>
+                                            <select asp-for="GenericName" class="form-control form-control-medium select2">
+                                                <option value="">Select a Generic Name</option>
+                                                <option value="Paracetamol">Paracetamol</option>
+                                                <option value="Azithromycin">Azithromycin</option>
+                                                <option value="Cefuroxime">Cefuroxime</option>
+                                                <option value="Amoxicillin">Amoxicillin</option>
+                                                <option value="Levofloxacin">Levofloxacin</option>
+                                                <option value="Omeprazole">Omeprazole</option>
+                                                <option value="Pantoprazole">Pantoprazole</option>
+                                                <option value="Metformin">Metformin</option>
+                                                <option value="Losartan">Losartan</option>
+                                                <option value="Atorvastatin">Atorvastatin</option>
+                                                <option value="Dexamethasone">Dexamethasone</option>
+                                                <option value="Ibuprofen">Ibuprofen</option>
+                                                <option value="Clarithromycin">Clarithromycin</option>
+                                                <option value="Hydroxychloroquine">Hydroxychloroquine</option>
+                                                <option value="Montelukast">Montelukast</option>
+                                                <option value="Fexofenadine">Fexofenadine</option>
+                                                <option value="Cefixime">Cefixime</option>
+                                                <option value="Ranitidine">Ranitidine</option>
+                                                <option value="Doxycycline">Doxycycline</option>
+                                                <option value="Prednisone">Prednisone</option>
+                                                <option value="Hydrocortisone">Hydrocortisone</option>
+                                                <option value="Vitamin C">Vitamin C</option>
+                                            </select>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-4 mt-1">
+
+                                        <div class="form-group mt-1">
+                                            <label>Dosage Form</label>
+                                            <select asp-for="DosageForm" class="form-control form-control-medium select2">
+                                                <option value="">Select a Dosage Form</option>
+                                                <option value="Tablet">Tablet</option>
+                                                <option value="Capsule">Capsule</option>
+                                                <option value="Syrup">Syrup</option>
+                                                <option value="Injection">Injection</option>
+                                                <option value="Suspension">Suspension</option>
+                                                <option value="Cream">Cream</option>
+                                                <option value="Gel">Gel</option>
+                                                <option value="Ointment">Ointment</option>
+                                                <option value="Powder">Powder</option>
+                                                <option value="Drops">Drops</option>
+                                                <option value="Inhaler">Inhaler</option>
+                                                <option value="Suppository">Suppository</option>
+                                                <option value="Lotion">Lotion</option>
+                                                <option value="Spray">Spray</option>
+                                                <option value="Solution">Solution</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group mt-1">
+                                            <label>Unit</label>
+                                            <select asp-for="Unit" class="form-control form-control-medium">
+                                                <option value="">Select a Unit</option>
+                                                <option value="Tablet">Tablet</option>
+                                                <option value="Capsule">Capsule</option>
+                                                <option value="ml">ml (Milliliter)</option>
+                                                <option value="mg">mg (Milligram)</option>
+                                                <option value="g">g (Gram)</option>
+                                                <option value="Sachet">Sachet</option>
+                                                <option value="Vial">Vial</option>
+                                                <option value="Ampoule">Ampoule</option>
+                                                <option value="Strip">Strip</option>
+                                                <option value="Bottle">Bottle</option>
+                                                <option value="Pack">Pack</option>
+                                                <option value="Tube">Tube</option>
+                                                <option value="Jar">Jar</option>
+                                                <option value="Drop">Drop</option>
+                                            </select>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-md-4 mt-1">
+                                        <div class="form-group mt-1">
+                                            <label>Packaging Type</label>
+                                            <select asp-for="PackagingType" class="form-control form-control-medium select2">
+                                                <option value="">Select a Packaging Type</option>
+                                                <option value="Blister Pack">Blister Pack</option>
+                                                <option value="Strip Pack">Strip Pack</option>
+                                                <option value="Bottle">Bottle</option>
+                                                <option value="Sachet">Sachet</option>
+                                                <option value="Tube">Tube</option>
+                                                <option value="Vial">Vial</option>
+                                                <option value="Ampoule">Ampoule</option>
+                                                <option value="Jar">Jar</option>
+                                                <option value="Pouch">Pouch</option>
+                                                <option value="Syringe">Syringe</option>
+                                                <option value="Dropper">Dropper</option>
+                                                <option value="Carton">Carton</option>
+                                                <option value="Tin">Tin</option>
+                                                <option value="Box">Box</option>
+                                            </select>
+                                        </div>
+
+
+                                        <div class="form-group mt-1">
+                                            <label>Quantity</label>
+                                            <input asp-for="Quantity" type="number" class="form-control form-control-medium">
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between">
+                                    <a href="javascript:location.reload();" class="btn btn-light btn-medium text-white"> Cencel</a>
+                                    <button type="submit" asp-action="Add" asp-controller="Medicine" class="btn btn-success btn-medium" id="submitButton"><i class="fa fa-save"></i> Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="~/Views/Shared/_ValidationScriptsPartial.cshtml" />
+
+    <script type="text/javascript">
+        // select2 load //
+        $(".select2").select2();
+    </script>
+}
+
+
+

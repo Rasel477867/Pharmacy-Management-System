@@ -1,0 +1,84 @@
+﻿@using WebPharmacy.Models
+@model CompanyModel
+@{
+    ViewBag.Title = "Add";
+
+}
+
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-body">
+            <div class="row" id="default">
+                <div class="col-12">
+                    @using (Html.BeginForm("Add", "Company", FormMethod.Post, new { @class = "form-horizontal", @id = "id" }))
+                    {
+                        <div class="card border-custom">
+                            <div class="card-header bg-custom">
+                                <h4 class="card-title"><i class="fa fa-clipboard"></i>New Company Type </h4>
+                                <div class="heading-elements">
+                                    <a href="@Url.Action("Index","Company")" class="btn btn-sm btn-success white"><i class="fa fa-list white"></i> Company List</a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" />
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="row">
+                                    <div class="col-md-4 mt-1">
+                                        <div class="form-group mt-1">
+                                            <label class="required">Company Name</label>
+                                            <input required asp-for="Name" type="text" class="form-control form-control-medium">
+                                        </div>
+                                        <div class="form-group mt-1">
+                                            <label>Email</label>
+                                            <input asp-for="Email" type="email" class="form-control form-control-medium">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-1">
+
+                                        <div class="form-group mt-1">
+                                            <label>Address</label>
+                                            <input asp-for="Address" type="text" class="form-control form-control-medium">
+                                        </div>
+                                        <div class="form-group mt-1">
+                                            <label>Website</label>
+                                            <input asp-for="Website" type="text" class="form-control form-control-medium">
+                                        </div>
+
+                                    </div>
+                                     <div class="col-md-4 mt-1">
+
+                                        <div class="form-group mt-1">
+                                            <label>Contact</label>
+                                            <input asp-for="ContactNumber" type="text" class="form-control form-control-medium">
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-between">
+                                    <a href="javascript:location.reload();" class="btn btn-light btn-medium text-white"> Cencel</a>
+                                    <button type="submit" asp-action="Add" asp-controller="Company" class="btn btn-success btn-medium" id="submitButton"><i class="fa fa-save"></i> Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="~/Views/Shared/_ValidationScriptsPartial.cshtml" />
+
+    <script type="text/javascript">
+        // select2 load //
+        $(".select2").select2();
+    </script>
+}
+
+

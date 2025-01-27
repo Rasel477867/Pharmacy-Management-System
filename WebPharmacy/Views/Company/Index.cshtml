@@ -1,0 +1,108 @@
+﻿@using WebPharmacy.Models
+@model CompanyModel
+
+@{
+    ViewData["Title"] = "Index";
+    var sl = 1;
+}
+
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-body">
+            <div class="row" id="default">
+                <div class="col-12">
+                    <div class="card border-custom">
+                        <div class="card-header bg-custom be">
+                            <h4 class="card-title"><i class="fa fa-prescription-bottle"></i> Company List</h4>
+                            <div class="heading-elements">
+                                <a href="@Url.Action("Add","Company")" class="btn btn-sm btn-success white"><i class="fa fa-plus white"></i> New LabOrder</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-condensed table-striped" id="containerTable">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th class="serial">Sl</th>
+                                                        <th>Name</th>
+                                                        <th>Contact</th>
+                                                        <th>Email</th>
+                                                        <th>Website</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @if (Model?.CompanyList != null && Model.CompanyList.Any())
+                                                    {
+                                                        foreach (var item in Model.CompanyList)
+                                                        {
+                                                            <tr>
+                                                                <td class="serial">@sl</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.ContactNumber)</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.Website)</td>
+                                                                <td class="action">
+                                                                    <div class="d-flex">
+                                                                 
+                                                                        &nbsp;&nbsp;
+                                                                        <a asp-action="Edit" asp-controller="Company" asp-route-id="@item.Id" class="text-primary" title="Edit">
+                                                                            <i class="fa fa-pencil"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            sl++;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <tr>
+                                                            <td colspan="4" class="text-center">No data available</td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="~/Bundle/_PagedListStylesPartial.cshtml" />
+    <partial name="~/Bundle/_SweetAlertScriptsPartial.cshtml" />
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.js"></script>
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <link href="~/lib/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+    <script>
+        $(document).ready(function () {
+            $('#containerTable').dataTable({
+                paging: true,
+                searching: true,
+                ordering: true,
+                info: false,
+                lengthChange: false,
+                pageLength: 7
+            });
+        });
+    </script>
+}
+
+<style>
+    .dataTables_paginate .paginate_button {
+        margin: 0 5px; /* Add horizontal spacing between buttons */
+    }
+</style>
+
+
