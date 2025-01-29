@@ -128,4 +128,61 @@
 </body>
 </html>
 
+<style>
+    #containerTable {
+        width: 100% !important;
+        table-layout: auto !important;
+        white-space: nowrap;
+    }
+
+        /* Header alignment: center */
+        #containerTable thead th {
+            background-color: #f8f9fa;
+            text-align: center; /* Header Center Align */
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        /* Data cells left alignment */
+        #containerTable tbody td {
+            padding: 10px;
+            text-align: left !important; /* Data Cells Left Align */
+            vertical-align: middle;
+        }
+
+    /* Pagination button styles */
+    .dataTables_paginate .paginate_button {
+        margin: 2px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #007bff;
+        background-color: #007bff;
+        color: white !important;
+    }
+
+        /* Current pagination button color */
+        .dataTables_paginate .paginate_button.current {
+            background-color: #0056b3 !important;
+            color: green !important;
+        }
+
+        /* Pagination button hover effect */
+        .dataTables_paginate .paginate_button:hover {
+            background-color: #004080 !important;
+            color: white !important;
+        }
+
+        /* Disable white color after clicking */
+        .dataTables_paginate .paginate_button:active {
+            background-color: #004080 !important;
+            color: white !important;
+        }
+
+    /* Responsive table overflow */
+    .table-responsive {
+        overflow-x: auto;
+    }
+</style>
+
+
 

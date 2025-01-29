@@ -1,0 +1,172 @@
+﻿@using WebPharmacy.Models
+@model PurchaseModel
+
+@{
+    ViewData["Title"] = "Index";
+    var sl = 1;
+}
+
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-body">
+            <div class="row" id="default">
+                <div class="col-12">
+                    <div class="card border-custom">
+                        <div class="card-header bg-custom be">
+                            <h4 class="card-title"><i class="fa fa-prescription-bottle"></i> Purchase List</h4>
+                            <div class="heading-elements">
+                                <a href="@Url.Action("Add","Purchase")" class="btn btn-sm btn-success white"><i class="fa fa-plus white"></i> New Purchase</a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-condensed table-striped" id="containerTable">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th class="serial">Sl</th>
+                                                        <th>Request By</th>
+                                                        <th>Store</th>
+                                                        <th>Priority</th>
+                                                        <th>Required Date</th>
+                                                        <th>Request Status</th>
+                                                        <th>Approval Status</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @if (Model?.PurchaseList != null && Model.PurchaseList.Any())
+                                                    {
+                                                        foreach (var item in Model.PurchaseList)
+                                                        {
+                                                            <tr>
+                                                                <td class="serial">@sl</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.RequestBy)</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.PurchaseStore)</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.Priority)</td>
+                                                                <td>(string.Format("{0:dd-MMM-yyyy}", @item.RequiredDate)</td>
+                                                                <td>Pending</td>
+                                                                <td>@Html.DisplayFor(modelItem => item.Status)</td>
+
+                                                                <td class="action">
+                                                                    <div class="d-flex">
+                                                                        <a asp-action="Details" asp-controller="Purchase" asp-route-id="@item.Id" class="text-info" title="Details">
+                                                                            <i class="fa fa-eye"></i>
+                                                                        </a>
+                                                                        &nbsp;&nbsp;
+                                                                        <a asp-action="Edit" asp-controller="Purchase" asp-route-id="@item.Id" class="text-primary" title="Edit">
+                                                                            <i class="fa fa-pencil"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            sl++;
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <tr>
+                                                            <td colspan="4" class="text-center">No data available</td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ @section Scripts {
+    <partial name="~/Bundle/_PagedListStylesPartial.cshtml" />
+    <partial name="~/Bundle/_SweetAlertScriptsPartial.cshtml" />
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.js"></script>
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <link href="~/lib/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    $(document).ready(function () {
+        $('#containerTable').DataTable({
+            paging: true,
+            searching: true,
+            ordering: true,
+            info: true,
+            lengthChange: false,
+            pageLength: 7,
+            autoWidth: false, //
+            responsive: true, // ✅ Responsive Table
+            columnDefs: [
+                { targets: "_all", className: "text-center align-middle" } //
+            ]
+        });
+    });
+</script>
+}
+@* <style>
+ #containerTable {
+        width: 100% !important;
+        table-layout: auto !important;
+        white-space: nowrap;
+    }
+
+
+        #containerTable thead th {
+            background-color: #f8f9fa;
+            text-align: center;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+
+    .dataTables_paginate .paginate_button {
+        margin: 2px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #007bff;
+        background-color: #007bff;
+        color: white !important;
+    }
+
+
+        /* Current pagination button color */
+        .dataTables_paginate .paginate_button.current {
+            background-color: #0056b3 !important;
+            color: green !important;
+        }
+
+        /* Pagination button hover effect */
+        .dataTables_paginate .paginate_button:hover {
+            background-color: #004080 !important; /* Darker shade for hover */
+            color: white !important;
+        }
+
+        /* Disable white color after clicking */
+        .dataTables_paginate .paginate_button:active {
+            background-color: #004080 !important; /* Same as hover color */
+            color: white !important;
+        }
+
+    /* Table Cell Padding & Alignment */
+    #containerTable td, #containerTable th {
+        padding: 10px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    /* Responsive table overflow */
+    .table-responsive {
+        overflow-x: auto;
+       
+    }
+
+</style> *@
+
+

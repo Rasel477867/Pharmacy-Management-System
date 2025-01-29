@@ -91,15 +91,15 @@
                 ordering: true,
                 info: false,
                 lengthChange: false,
-                pageLength: 7
+                pageLength: 7,
+                autoWidth: false, //
+                responsive: true, // ✅ Responsive Table
+                columnDefs: [
+                    { targets: "_all", className: "text-center align-middle" } //
+                ]
             });
         });
     </script>
 }
 
-<style>
-    .dataTables_paginate .paginate_button {
-        margin: 0 5px; /* Add horizontal spacing between buttons */
-    }
-</style>
 
